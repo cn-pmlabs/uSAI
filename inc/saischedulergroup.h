@@ -34,6 +34,19 @@
  */
 
 /**
+ * @brief Enum defining scheduler group level.
+ */
+typedef enum _sai_scheduler_group_level_t
+{
+    /** Port */
+    SAI_SCHEDULER_GROUP_LEVEL_PORT = 0x00000000,
+
+    /** Queue */
+    SAI_SCHEDULER_GROUP_LEVEL_QUEUE = 0x00000001,
+
+} sai_scheduler_group_level_t;
+
+/**
  * @brief Enum defining scheduler group attributes.
  */
 typedef enum _sai_scheduler_group_attr_t
@@ -72,7 +85,7 @@ typedef enum _sai_scheduler_group_attr_t
     /**
      * @brief Scheduler group level
      *
-     * @type sai_uint8_t
+     * @type sai_scheduler_group_level_t
      * @flags MANDATORY_ON_CREATE | CREATE_ONLY
      */
     SAI_SCHEDULER_GROUP_ATTR_LEVEL = 0x00000003,
