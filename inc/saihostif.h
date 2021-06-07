@@ -322,6 +322,9 @@ typedef enum _sai_hostif_trap_type_t
     /** Default packet action is forward */
     SAI_HOSTIF_TRAP_TYPE_IPV6_NEIGHBOR_ADVERTISEMENT = 0x00002013,
 
+    /** Default packet action is forward */
+    SAI_HOSTIF_TRAP_TYPE_ISIS = 0x00002014,
+
     /** Router traps custom range start */
     SAI_HOSTIF_TRAP_TYPE_ROUTER_CUSTOM_RANGE_BASE = 0x00003000,
 
