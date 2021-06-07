@@ -47,7 +47,40 @@ typedef enum _sai_scheduling_type_t
     /** Deficit Weighted Round-Robin Scheduling */
     SAI_SCHEDULING_TYPE_DWRR = 0x00000002,
 
+    /** Strict and Deficit Weighted Round-Robin Scheduling */
+    SAI_SCHEDULING_TYPE_STRICT_AND_DWRR = 0x00000003,
+
 } sai_scheduling_type_t;
+
+/**
+ * @brief Enum defining scheduling priority.
+ */
+typedef enum _sai_scheduler_scheduling_priority_t
+{
+    /** Low */
+    SAI_SCHEDULER_SCHEDULING_PRIORITY_LOW = 0x00000000,
+
+    /** Normal_1 */
+    SAI_SCHEDULER_SCHEDULING_PRIORITY_NORMAL_1 = 0x00000001,
+
+    /** Normal_2 */
+    SAI_SCHEDULER_SCHEDULING_PRIORITY_NORMAL_2 = 0x00000002,
+
+    /** Normal_3 */
+    SAI_SCHEDULER_SCHEDULING_PRIORITY_NORMAL_3 = 0x00000003,
+
+    /** Normal_4 */
+    SAI_SCHEDULER_SCHEDULING_PRIORITY_NORMAL_4 = 0x00000004,
+
+    /** Normal_5 */
+    SAI_SCHEDULER_SCHEDULING_PRIORITY_NORMAL_5 = 0x00000005,
+
+    /** Normal_6 */
+    SAI_SCHEDULER_SCHEDULING_PRIORITY_NORMAL_6 = 0x00000006,
+
+    /** High */
+    SAI_SCHEDULER_SCHEDULING_PRIORITY_HIGH = 0x00000007,
+} sai_scheduler_scheduling_priority_t;
 
 /**
  * @brief Enum defining scheduler attributes.
@@ -128,6 +161,15 @@ typedef enum _sai_scheduler_attr_t
      * @default 0
      */
     SAI_SCHEDULER_ATTR_MAX_BANDWIDTH_BURST_RATE = 0x00000006,
+
+    /**
+     * @brief Scheduling priority
+     *
+     * @type sai_scheduler_scheduling_priority_t
+     * @flags CREATE_AND_SET
+     * @default SAI_SCHEDULER_SCHEDULING_PRIORITY_LOW
+     */
+    SAI_SCHEDULER_ATTR_SCHEDULING_PRIORITY = 0x00000007,
 
     /**
      * @brief End of attributes
